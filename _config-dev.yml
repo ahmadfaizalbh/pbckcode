@@ -2,12 +2,12 @@ base_url : http://localhost:4000
 dev : true
 site_url : http://www.pierrebaron.fr
 navigation:
-- text: HOME
+- text: Home
   url: /
-- text: BLOG
+- text: Blog
   url: /blog/
   layout: post
-- text: CONTACT
+- text: Contact
   url: /contact/
 subnavigation:
 - text: Index

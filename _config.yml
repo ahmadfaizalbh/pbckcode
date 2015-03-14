@@ -3,12 +3,12 @@ dev : false
 google_analytics_id: UA-21369110-4
 site_url : http://www.pierrebaron.fr
 navigation:
-- text: HOME
+- text: Home
   url: /
-- text: BLOG
+- text: Blog
   url: /blog/
   layout: post
-- text: CONTACT
+- text: Contact
   url: /contact/
 subnavigation:
 - text: Index
