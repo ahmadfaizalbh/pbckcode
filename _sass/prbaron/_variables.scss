@@ -3,7 +3,7 @@
 // --------------------------------------------------
 @include font-face("Mir-Medium", "/fonts/mir-medium/mir-medium_regular");
 //
-@import url(http://fonts.googleapis.com/css?family=Kreon:700|Droid+Serif:700italic|Open+Sans:100);
+@import url(http://fonts.googleapis.com/css?family=Kreon:700|Droid+Serif:700italic|Open+Sans:300,600);
 
 $fa-font-path:        "/fonts/font-awesome-4.1.0";
 
@@ -12,8 +12,8 @@ $fa-font-path:        "/fonts/font-awesome-4.1.0";
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$gray-darker:            #333;
-$gray-dark:              #404040;
+$gray-darker:            #363b41;
+$gray-dark:              #464b53;
 $gray:                   #ccd1d9;
 $gray-light:             #e6e9ed;
 $gray-lighter:           #f5f6f7;
@@ -350,7 +350,7 @@ $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2
 $navbar-collapse-max-height:       340px;
 
 $navbar-default-color:             #fff;
-$navbar-default-bg:                transparentize($brand-primary, 0.5);
+$navbar-default-bg:                transparent;
 $navbar-default-border:            rgba(0,0,0,.1);
 
 // Navbar links
@@ -836,7 +836,7 @@ $abbr-border-color:           $gray-light;
 //** Headings small color
 $headings-small-color:        $gray-light;
 //** Blockquote small color
-$blockquote-small-color:      $gray-light;
+$blockquote-small-color:      $gray;
 //** Blockquote font size
 $blockquote-font-size:        ($font-size-base * 1.25);
 //** Blockquote border color

@@ -1,8 +1,11 @@
 header {
-    background              : url(/img/gradient.jpg) fixed;
-    position                : relative;
-    -webkit-background-size : cover; /* pour Chrome et Safari */
-    -moz-background-size    : cover; /* pour Firefox */
-    -o-background-size      : cover; /* pour Opera */
-    background-size         : cover; /* version standardisée */
+    @include stripedBackground('/img/header.svg', #1790bb, $brand-primary);
+
+    svg {
+        display : block;
+
+        path {
+            fill : $body-bg;
+        }
+    }
 }

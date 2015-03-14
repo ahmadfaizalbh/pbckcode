@@ -16,14 +16,13 @@
 // the implementations are identical except for the property
 // prefix.
 @mixin transform($value) {
-  -webkit-transform : $value;
-   -khtml-transform : $value;
-     -moz-transform : $value;
-      -ms-transform : $value;
-       -o-transform : $value;
-          transform : $value;
+    -webkit-transform : $value;
+    -khtml-transform  : $value;
+    -moz-transform    : $value;
+    -ms-transform     : $value;
+    -o-transform      : $value;
+    transform         : $value;
 }
-
 
 // Button variants
 //
@@ -67,4 +66,16 @@
         color            : $background;
         background-color : $color;
     }
+}
+
+@mixin stripedBackground($image, $darkColor, $lightColor) {
+    background-image  : url($image);
+    background-size   : 100% 620%;
+    background-image  : url('/img/overlay.png'), url($image), -moz-linear-gradient(120deg, $darkColor 15%, $lightColor 55%);
+    background-image  : url('/img/overlay.png'), url($image), -webkit-linear-gradient(120deg, $darkColor 15%, $lightColor 55%);
+    background-image  : url('/img/overlay.png'), url($image), -o-linear-gradient(120deg, $darkColor 15%, $lightColor 55%);
+    background-image  : url('/img/overlay.png'), url($image), -ms-linear-gradient(120deg, $darkColor 15%, $lightColor 55%);
+    background-image  : url('/img/overlay.png'), url($image), linear-gradient(120deg, $darkColor 15%, $lightColor 55%);
+    background-size   : 128px 128px, 100% 100%, auto;
+    background-repeat : repeat, no-repeat, no-repeat;
 }

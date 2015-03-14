@@ -4,24 +4,21 @@ pre {
     border-radius : 0;
     font-size     : 0.85em;
     margin        : 0;
+    //padding       : ($line-height-computed - 1) (($line-height-computed - 1) / 2);
     word-break    : normal;
 }
 
 .highlighttable {
-    background-color : #fcfdfe;
+    background-color : $gray-lighter;
     border           : 1px solid $gray-light;
     border-radius    : $border-radius-small;
     display          : block;
-    overflow         : auto;
-    margin           : 0 0 ($line-height-computed / 2);
+    margin           : $line-height-computed (-$grid-gutter-width / 2) $line-height-computed;
 
     .linenos {
         pre {
-
-            -webkit-box-shadow : inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
-            -moz-box-shadow    : inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
-            box-shadow         : inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
-            width              : 41px;
+            opacity : 0.35;
+            padding : 21px 10.5px;
         }
         code[class*="language-"],
         pre[class*="language-"] {

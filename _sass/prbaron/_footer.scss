@@ -1,4 +1,12 @@
 .footer {
+
+    svg {
+        display : block;
+        path {
+            fill : $body-bg;
+        }
+    }
+
     a {
         padding-right : 25px;
     }
@@ -31,15 +39,12 @@
 }
 
 .footer-inverse {
-    background : $gray-darker;
-    color      : $footer-color;
-
-    .footer-information {
-        background : $gray-dark;
-    }
+    color : $footer-color;
+    @include stripedBackground('/img/footer.svg', $gray-darker, $gray-dark);
 
     a {
         color : $footer-color;
+        @include transition(color .3s ease-in-out);
 
         &:hover {
             color           : $link-hover-color;

@@ -1,5 +1,6 @@
 .navbar {
-    border : none;
+    background : none;
+    border     : none;
 }
 
 .navbar-brand {
@@ -11,25 +12,25 @@
         vertical-align     : middle;
         height             : 48px;
         margin-right       : 4px;
-        -webkit-transition : background 0.3s ease-in-out;
-        -moz-transition    : background 0.3s ease-in-out;
-        transition         : background 0.3s ease-in-out;
+        -webkit-transition : background 0.5s ease-in-out;
+        -moz-transition    : background 0.5s ease-in-out;
+        transition         : background 0.5s ease-in-out;
     }
-    -webkit-transition : color 0.3s ease-in-out;
-    -moz-transition    : color 0.3s ease-in-out;
-    transition         : color 0.3s ease-in-out;
+    -webkit-transition : color 0.5s ease-in-out;
+    -moz-transition    : color 0.5s ease-in-out;
+    transition         : color 0.5s ease-in-out;
 
     &:hover {
         color              : rgba(0, 0, 0, .5);
         img {
             background         : rgba(0, 0, 0, .5);
-            -webkit-transition : background 0.3s ease-in-out;
-            -moz-transition    : background 0.3s ease-in-out;
-            transition         : background 0.3s ease-in-out;
+            -webkit-transition : background 0.5s ease-in-out;
+            -moz-transition    : background 0.5s ease-in-out;
+            transition         : background 0.5s ease-in-out;
         }
-        -webkit-transition : color 0.3s ease-in-out;
-        -moz-transition    : color 0.3s ease-in-out;
-        transition         : color 0.3s ease-in-out;
+        -webkit-transition : color 0.5s ease-in-out;
+        -moz-transition    : color 0.5s ease-in-out;
+        transition         : color 0.5s ease-in-out;
     }
 }
 
@@ -37,14 +38,14 @@
     li > a {
         border-bottom      : 5px solid transparent;
         border-top         : none;
-        -webkit-transition : color 0.3s ease-in-out;
-        -moz-transition    : color 0.3s ease-in-out;
-        transition         : color 0.3s ease-in-out;
+        -webkit-transition : color 0.5s ease-in-out;
+        -moz-transition    : color 0.5s ease-in-out;
+        transition         : color 0.5s ease-in-out;
 
         &:hover {
-            -webkit-transition : color 0.3s ease-in-out;
-            -moz-transition    : color 0.3s ease-in-out;
-            transition         : color 0.3s ease-in-out;
+            -webkit-transition : color 0.5s ease-in-out;
+            -moz-transition    : color 0.5s ease-in-out;
+            transition         : color 0.5s ease-in-out;
         }
 
         @media (min-width : $grid-float-breakpoint) {
@@ -56,16 +57,22 @@
         border-bottom-color : $navbar-default-link-hover-color;
         font-weight         : bold;
 
-        @media (min-width    : $grid-float-breakpoint) {
+        @media (min-width : $grid-float-breakpoint) {
             border-top-color : $navbar-default-link-hover-color;
         }
     }
 }
 
 .navbar-toggle {
-    position : relative;
-    height   : 34px;
-    width    : 44px;
+    position           : relative;
+    height             : 46px;
+    width              : 46px;
+    margin-top         : 8px;
+    padding            : 0;
+    -webkit-transition : -webkit-transform 0.5s;
+    -moz-transition    : -moz-transform 0.5s;
+    transition         : transform 0.5s;
+    @include transform(rotate(180deg));
 
     .icon-bar {
         position     : absolute;
@@ -79,39 +86,65 @@
         margin-left  : auto;
         margin-right : auto;
     }
-    .icon-bar {
-        @include transition(all 0.3s linear);
-    }
-    .icon-bar:first-child {
-        @include transform(rotate(45deg));
-    }
+
+    // center line
     .icon-bar:nth-child(2) {
-        -webkit-transition : -webkit-transform 0.15s, opacity 0.15s;
-        -moz-transition    : -moz-transform 0.15s, opacity 0.15s;
-        transition         : transform 0.15s, opacity 0.15s;
-        opacity            : 0;
-        @include transform(translateX(10px));
+        -webkit-transition : background 0.5s;
+        -moz-transition    : background 0.5s;
+        transition         : background 0.5s;
+        background         : transparent;
     }
-    .icon-bar:last-child {
-        @include transform(rotate(-45deg));
+
+    .icon-bar:nth-child(1),
+    .icon-bar:nth-child(3) {
+        -webkit-transition : transform 0.25s;
+        -moz-transition    : transform 0.25s;
+        transition         : transform 0.25s;
+        transform-origin   : 50% 50%;
+    }
+
+    .icon-bar:nth-child(1) {
+        @include transform(translateY(0) rotate(45deg));
+    }
+
+    .icon-bar:nth-child(3) {
+        @include transform(translateY(0) rotate(-45deg));
+    }
+
+    svg {
+        fill              : transparent;
+        stroke            : $navbar-default-toggle-icon-bar-bg;
+        @include transition(stroke-dashoffset 0.5s);
+        stroke-dasharray  : 170;
+        stroke-dashoffset : 0;
+        stroke-width      : 2px;
     }
 
     &.collapsed {
-        .icon-bar {
-            @include transition(all 0.3s linear);
-        }
-        .icon-bar:first-child {
+        @include transform(rotate(0deg));
+
+        .icon-bar:nth-child(1) {
             @include transform(translateY(-6px) rotate(0deg));
         }
         .icon-bar:nth-child(2) {
-            -webkit-transition : -webkit-transform 0.15s, opacity 0.15s;
-            -moz-transition    : -moz-transform 0.15s, opacity 0.15s;
-            transition         : transform 0.15s, opacity 0.15s;
-            opacity            : 1;
+            background : $navbar-default-toggle-icon-bar-bg;
             @include transform(translateX(0px));
         }
-        .icon-bar:last-child {
+        .icon-bar:nth-child(3) {
             @include transform(translateY(6px) rotate(0deg));
+        }
+
+        &:hover {
+            .icon-bar:nth-child(1) {
+                @include transform(translateY(-8px));
+            }
+            .icon-bar:nth-child(3) {
+                @include transform(translateY(8px));
+            }
+        }
+
+        svg {
+            stroke-dashoffset : 170;
         }
     }
 }
