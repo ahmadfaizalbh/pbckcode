@@ -7,7 +7,7 @@ CKEDITOR.replace('editor1', {
 // SYNTAX_HIGHLIGHTER
 CKEDITOR.instances.editor1.on('change', function (e) {
     // append the result into the div
-    $('#output5').html(e.editor.getData());
+    document.getElementById('output5').innerHTML = e.editor.getData();
 
     Prism.highlightAll();
 });

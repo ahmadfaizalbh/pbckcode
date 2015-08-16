@@ -2,29 +2,9 @@
 // -------------------------
 .alert {
     border : none;
+    border-radius: 0;
 
-    &:before {
-        @extend .fa;
-        opacity        : 0.75;
-        font-size      : 20px;
-        margin-right   : 4px;
-        margin-top     : 2px;
-        vertical-align : text-top;
+    .alert-title {
+    	display: block
     }
-}
-
-.alert-success {
-    @extend .fa-check-circle;
-}
-
-.alert-info {
-    @extend .fa-info-circle;
-}
-
-.alert-warning {
-    @extend .fa-exclamation-circle;
-}
-
-.alert-danger {
-    @extend .fa-times-circle;
 }

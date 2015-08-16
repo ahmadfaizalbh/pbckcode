@@ -3,12 +3,14 @@
     margin-right  : 0;
     padding-left  : 0;
     padding-right : 0;
-    width         : 100% ! important;
+    width         : 100% !important;
+    max-width     : 100%;
 
     h1, h2, h3, h4, h5, h6,
     p, blockquote, ul, ol,
     .disqus, .highlighttable > tbody,
-    .alert, iframe {
+    .alert > .container,
+    iframe {
         @include container-fixed();
 
         @media (min-width : $screen-sm-min) {

@@ -4,53 +4,52 @@
 }
 
 .navbar-brand {
-    padding            : 8.5px $grid-gutter-width / 2;
+    padding : 8.5px $grid-gutter-width / 2;
 
     img {
-        background         : rgba(0, 0, 0, .1);
-        border-radius      : 25em;
-        vertical-align     : middle;
-        height             : 48px;
-        margin-right       : 4px;
-        -webkit-transition : background 0.5s ease-in-out;
-        -moz-transition    : background 0.5s ease-in-out;
-        transition         : background 0.5s ease-in-out;
+        background     : rgba(0, 0, 0, .1);
+        border-radius  : 25em;
+        vertical-align : middle;
+        height         : 48px;
+        margin-right   : 4px;
+        @include transition(background 0.5s ease-in-out);
     }
-    -webkit-transition : color 0.5s ease-in-out;
-    -moz-transition    : color 0.5s ease-in-out;
-    transition         : color 0.5s ease-in-out;
+    @include transition(color 0.5s ease-in-out);
 
     &:hover {
-        color              : rgba(0, 0, 0, .5);
+        color : rgba(0, 0, 0, .5);
         img {
-            background         : rgba(0, 0, 0, .5);
-            -webkit-transition : background 0.5s ease-in-out;
-            -moz-transition    : background 0.5s ease-in-out;
-            transition         : background 0.5s ease-in-out;
+            background : rgba(0, 0, 0, .5);
+            @include transition(background 0.5s ease-in-out);
         }
-        -webkit-transition : color 0.5s ease-in-out;
-        -moz-transition    : color 0.5s ease-in-out;
-        transition         : color 0.5s ease-in-out;
+        @include transition(color 0.5s ease-in-out);
     }
 }
 
 .navbar-nav {
-    li > a {
-        border-bottom      : 5px solid transparent;
-        border-top         : none;
-        -webkit-transition : color 0.5s ease-in-out;
-        -moz-transition    : color 0.5s ease-in-out;
-        transition         : color 0.5s ease-in-out;
+    display : flex;
 
-        &:hover {
-            -webkit-transition : color 0.5s ease-in-out;
-            -moz-transition    : color 0.5s ease-in-out;
-            transition         : color 0.5s ease-in-out;
-        }
+    li {
+        text-align : center;
+        flex       : 1;
 
         @media (min-width : $grid-float-breakpoint) {
-            border-top    : 5px solid transparent;
-            border-bottom : none;
+            text-align : left;
+        }
+
+        > a {
+            border-bottom : 5px solid transparent;
+            border-top    : none;
+            @include transition(color 0.5s ease-in-out);
+
+            &:hover {
+                @include transition(color 0.5s ease-in-out);
+            }
+
+            @media (min-width : $grid-float-breakpoint) {
+                border-top    : 5px solid transparent;
+                border-bottom : none;
+            }
         }
     }
     .active > a {
@@ -151,4 +150,19 @@
 
 .navbar-toggle .icon-bar + .icon-bar {
     margin-top : -1px;
+}
+
+.navbar-collapse {
+    @include transition(height 0.5s ease-in-out, visibility 0.5s ease-in-out);
+    box-shadow : none;
+    overflow-y : hidden;
+
+    &.collapse {
+        display : inherit;
+        height  : 0;
+    }
+    &.in {
+        overflow-y : hidden;
+        height     : 70px; //computed value based on Google Chrome developer
+    }
 }

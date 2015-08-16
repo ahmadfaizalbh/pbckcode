@@ -11,18 +11,25 @@ $fa-font-path:        "/fonts/font-awesome-4.1.0";
 //== Colors
 //
 //## Gray and brand colors for use across Bootstrap.
-
+/*
 $gray-darker:            #363b41;
 $gray-dark:              #464b53;
 $gray:                   #ccd1d9;
 $gray-light:             #e6e9ed;
 $gray-lighter:           #f5f6f7;
+*/
+
+$gray-darker:            #2b3940;
+$gray-dark:              #3a4953;
+$gray:                   #627580;
+$gray-light:             #e0e8eb;
+$gray-lighter:           #f1f5f8;
 
 $brand-primary:         #4fc1e9;
-$brand-success:         #a0d468;
-$brand-warning:         #ffce54;
-$brand-danger:          #ed5565;
-$brand-info:            #5d9cec;
+$brand-success:         #39c796;
+$brand-warning:         #fbd47a;
+$brand-danger:          #f6555a;
+$brand-info:            #00b5ca;
 
 
 $footer-color : rgba(255,255,255, 0.6);
@@ -106,9 +113,9 @@ $padding-xs-horizontal:     5px;
 $line-height-large:         1.33;
 $line-height-small:         1.5;
 
-$border-radius-base:        4px;
-$border-radius-large:       6px;
-$border-radius-small:       3px;
+$border-radius-base:        2px;
+$border-radius-large:       4px;
+$border-radius-small:       1px;
 
 //** Global color for active items (e.g., navs or dropdowns).
 $component-active-color:    #fff;
@@ -149,12 +156,12 @@ $table-border-color:            #ddd;
 $btn-font-weight:                normal;
 
 $btn-default-color:              #fff;
-$btn-default-bg:                 $gray-dark;
-$btn-default-border:             $gray-dark;
+$btn-default-bg:                 $gray;
+$btn-default-border:             $gray;
 
 $btn-primary-color:              #fff;
 $btn-primary-bg:                 $brand-primary;
-$btn-primary-border:             darken($btn-primary-bg, 5%);
+$btn-primary-border:             $btn-primary-bg;
 
 $btn-success-color:              #fff;
 $btn-success-bg:                 $brand-success;
@@ -187,11 +194,11 @@ $input-bg-disabled:              $gray-lighter;
 //** Text color for `<input>`s
 $input-color:                    $text-color;
 //** `<input>` border color
-$input-border:                   #ccc;
+$input-border:                   #c8d4d9;
 //** `<input>` border radius
 $input-border-radius:            $border-radius-base;
 //** Border color for inputs on focus
-$input-border-focus:             #66afe9;
+$input-border-focus:             $brand-primary;
 
 //** Placeholder text color
 $input-color-placeholder:        $gray-light;
@@ -351,7 +358,7 @@ $navbar-collapse-max-height:       340px;
 
 $navbar-default-color:             #fff;
 $navbar-default-bg:                transparent;
-$navbar-default-border:            rgba(0,0,0,.1);
+$navbar-default-border:            transparent;
 
 // Navbar links
 $navbar-default-link-color:                #fff;
@@ -486,16 +493,16 @@ $state-success-text:             #3c763d;
 $state-success-bg:               #dff0d8;
 $state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%);
 
-$state-info-text:                #31708f;
-$state-info-bg:                  #d9edf7;
+$state-info-text:                darken($brand-info, 5%);
+$state-info-bg:                  #ecfdff;
 $state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%);
 
-$state-warning-text:             #8a6d3b;
-$state-warning-bg:               #fcf8e3;
+$state-warning-text:             darken($brand-warning, 30%);
+$state-warning-bg:               #fef9ed;
 $state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%);
 
-$state-danger-text:              #a94442;
-$state-danger-bg:                #f2dede;
+$state-danger-text:              darken($brand-danger, 30%);
+$state-danger-bg:                #fff6f7;
 $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%);
 
 

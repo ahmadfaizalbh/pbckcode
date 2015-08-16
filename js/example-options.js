@@ -6,6 +6,6 @@ CKEDITOR.replace('editor1', {
 
 CKEDITOR.instances.editor1.on('change', function (e) {
     // append the result into the div
-    $('#output1').html(e.editor.getData());
+    document.getElementById('output1').innerHTML = e.editor.getData();
     prettyPrint(null, document.getElementById('output1'));
 });

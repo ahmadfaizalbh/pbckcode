@@ -1,3 +1,41 @@
+.btn {
+    box-shadow : 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+    @include transition(all, .25s, ease-in-out);
+    &:hover {
+        box-shadow : 0 3px 6px 0 rgba(0, 0, 0, 0.14), 0 2px 8px 0 rgba(0, 0, 0, 0.11);
+    }
+    &:active {
+        box-shadow : none;
+    }
+}
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+.btn-default {
+  @include button-variant-pbaron($btn-default-bg, $btn-default-border);
+}
+.btn-primary {
+  @include button-variant-pbaron($btn-primary-bg, $btn-primary-border);
+}
+// Success appears as green
+.btn-success {
+  @include button-variant-pbaron($btn-success-bg, $btn-success-border);
+}
+// Info appears as blue-green
+.btn-info {
+  @include button-variant-pbaron($btn-info-bg, $btn-info-border);
+}
+// Warning appears as orange
+.btn-warning {
+  @include button-variant-pbaron($btn-warning-bg, $btn-warning-border);
+}
+// Danger and error appear as red
+.btn-danger {
+  @include button-variant-pbaron($btn-danger-bg, $btn-danger-border);
+}
+
 .btn-ghost {
     // Alternate buttons
     // --------------------------------------------------
