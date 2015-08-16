@@ -13,7 +13,7 @@ See it in action ! http://prbaron.github.com/pbckcode/
 4. Open the config.js file and add the following lines :
 
 ```
- CKEDITOR.editorConfig = function( config ) {
+CKEDITOR.editorConfig = function( config ) {
      // CKEDITOR TOOLBAR CUSTOMIZATION
      // I only set the needed buttons, so feel free to add those you want in the array
      config.toolbarGroups = [
@@ -28,6 +28,7 @@ See it in action ! http://prbaron.github.com/pbckcode/
      // ACF protects your CKEditor instance of adding unofficial tags
      // however it strips out the pre tag of pbckcode plugin
      // add this rule to enable it, useful when you want to re edit a post
+     // Only needed on v1.1.x and v1.2.0
      config.allowedContent= 'pre[*]{*}(*)'; // add other rules here
 
 
@@ -48,9 +49,13 @@ See it in action ! http://prbaron.github.com/pbckcode/
          theme : 'textmate',
 
          // Tab indentation (in spaces)
-         tab_size : '4'
+         tab_size : '4',
+
+         // the root path of ACE Editor. Useful if you want to use the plugin
+         // without any Internet connection
+         js : "http://cdn.jsdelivr.net//ace/1.1.4/noconflict/"
      };
- };
+};
 ```
 And you are good to go! You will have the same configuration than the demo.
 
