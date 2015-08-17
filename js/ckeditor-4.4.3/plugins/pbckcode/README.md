@@ -53,7 +53,7 @@ CKEDITOR.editorConfig = function( config ) {
 
          // the root path of ACE Editor. Useful if you want to use the plugin
          // without any Internet connection
-         js : "http://cdn.jsdelivr.net//ace/1.1.4/noconflict/"
+         js : "https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/"
      };
 };
 ```
