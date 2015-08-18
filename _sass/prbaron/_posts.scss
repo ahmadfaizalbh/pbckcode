@@ -28,17 +28,10 @@
     }
 
     .post-actions {
-        margin     : $grid-gutter-width 0;
-        text-align : center;
-        ul {
-            padding-left : 0;
-        }
-        li {
-            display    : inline-block;
-            list-style : none;
-        }
-        li:first-child {
-            margin-right : 20px;
+         margin     : $grid-gutter-width 0;
+
+        a:first-child {
+            margin-right : $grid-gutter-width / 2;
         }
     }
 
