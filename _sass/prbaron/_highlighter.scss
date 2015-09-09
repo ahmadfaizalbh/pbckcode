@@ -2,6 +2,7 @@ pre {
     background    : none;
     border        : none;
     border-radius : 0;
+    color         : $gray-lighter;
     font-size     : 0.85em;
     margin        : 0;
     //padding       : ($line-height-computed - 1) (($line-height-computed - 1) / 2);
@@ -9,7 +10,7 @@ pre {
 }
 
 .highlighttable {
-    background-color : $gray-lighter;
+    background-color : $gray-dark;
     border-radius    : $border-radius-small;
     display          : block;
     margin           : $line-height-computed (-$grid-gutter-width / 2) $line-height-computed;
@@ -58,7 +59,7 @@ pre {
 
 /* Operator */
 .p {
-    color : #2b303b
+    color : #c4c9d4
 }
 
 /* Punctuation */
@@ -166,12 +167,12 @@ pre {
 
 /* Literal.String */
 .na {
-    color : #526679
+    color : #8fa1b3
 }
 
 /* Name.Attribute */
 .nb {
-    color : #2b303b
+    color : #c4c9d4
 }
 
 /* Name.Builtin */
@@ -191,7 +192,7 @@ pre {
 
 /* Name.Decorator */
 .ni {
-    color : #2b303b
+    color : #c4c9d4
 }
 
 /* Name.Entity */
@@ -201,12 +202,12 @@ pre {
 
 /* Name.Exception */
 .nf {
-    color : #526679
+    color : #8fa1b3
 }
 
 /* Name.Function */
 .nl {
-    color : #2b303b
+    color : #c4c9d4
 }
 
 /* Name.Label */
@@ -216,12 +217,12 @@ pre {
 
 /* Name.Namespace */
 .nx {
-    color : #526679
+    color : #8fa1b3
 }
 
 /* Name.Other */
 .py {
-    color : #2b303b
+    color : #c4c9d4
 }
 
 /* Name.Property */
@@ -241,7 +242,7 @@ pre {
 
 /* Operator.Word */
 .w {
-    color : #2b303b
+    color : #c4c9d4
 }
 
 /* Text.Whitespace */
@@ -271,7 +272,7 @@ pre {
 
 /* Literal.String.Backtick */
 .sc {
-    color : #2b303b
+    color : #c4c9d4
 }
 
 /* Literal.String.Char */
@@ -321,7 +322,7 @@ pre {
 
 /* Literal.String.Symbol */
 .bp {
-    color : #2b303b
+    color : #c4c9d4
 }
 
 /* Name.Builtin.Pseudo */

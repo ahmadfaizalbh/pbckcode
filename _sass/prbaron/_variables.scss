@@ -16,17 +16,17 @@ $gray-light:             #e6e9ed;
 $gray-lighter:           #f5f6f7;
 */
 
-$gray-darker : #2b3940;
-$gray-dark : #3a4953;
-$gray : #627580;
-$gray-light : #e0e8eb;
+$gray-darker : #2b3941;
+$gray-dark : #3a4954;
+$gray : #637680;
+$gray-light : #dde6ec;
 $gray-lighter : #f1f5f8;
 
 $brand-primary : #4fc1e9;
-$brand-success : #39c796;
-$brand-warning : #fbd47a;
-$brand-danger : #f6555a;
-$brand-info : #00b5ca;
+$brand-success : #51c693;
+$brand-warning : #f7d574;
+$brand-danger : #ed595b;
+$brand-info : #20b5cb;
 
 $footer-color : rgba(255, 255, 255, 0.6);
 
@@ -37,7 +37,7 @@ $footer-color : rgba(255, 255, 255, 0.6);
 //** Background color for `<body>`.
 $body-bg : #fefefe;
 //** Global text color on `<body>`.
-$text-color : #656d78;
+$text-color : $gray;
 
 //** Global textual link color.
 $link-color : $brand-primary;
@@ -477,20 +477,23 @@ $jumbotron-font-size : ceil(($font-size-base * 1.5));
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-$state-success-text : #3c763d;
-$state-success-bg : #dff0d8;
+$state-success-text : white;
+$state-success-bg : $brand-success;
 $state-success-border : darken(adjust-hue($state-success-bg, -10), 5%);
 
-$state-info-text : darken($brand-info, 5%);
-$state-info-bg : #ecfdff;
+//$state-info-text : darken($brand-info, 5%);
+//$state-info-bg : #ecfdff;
+//$state-info-border : darken(adjust-hue($state-info-bg, -10), 7%);
+$state-info-text : white;
+$state-info-bg : $brand-info;
 $state-info-border : darken(adjust-hue($state-info-bg, -10), 7%);
 
-$state-warning-text : darken($brand-warning, 30%);
-$state-warning-bg : #fef9ed;
+$state-warning-text : white;
+$state-warning-bg : $brand-warning;
 $state-warning-border : darken(adjust-hue($state-warning-bg, -10), 5%);
 
-$state-danger-text : darken($brand-danger, 30%);
-$state-danger-bg : #fff6f7;
+$state-danger-text : white;
+$state-danger-bg : $brand-danger;
 $state-danger-border : darken(adjust-hue($state-danger-bg, -10), 5%);
 
 //== Tooltips
