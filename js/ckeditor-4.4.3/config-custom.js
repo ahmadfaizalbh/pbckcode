@@ -6,6 +6,6 @@ CKEDITOR.editorConfig = function( config ) {
 	config.extraPlugins = 'pbckcode,onchange,sourcearea';
     config.pbckcode = {
         highlighter : 'PRISM',
-        js          : "http://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/"
+        js          : "http://cdnjs.cloudflare.com/ajax/libs/ace/1.2.4/"
     };
 };
