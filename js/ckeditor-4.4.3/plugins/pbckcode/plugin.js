@@ -35,7 +35,7 @@ CKEDITOR.plugins.add('pbckcode', {
             ],
             theme    : 'textmate',
             tab_size : 4,
-            js       : "//cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/"
+            js       : "//cdnjs.cloudflare.com/ajax/libs/ace/1.2.4/"
         };
 
         // merge user settings with default settings
